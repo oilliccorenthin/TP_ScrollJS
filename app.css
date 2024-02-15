@@ -1,0 +1,89 @@
+html, body {
+margin: 0;
+padding: 0;
+font-family: sans-serif;
+color: #daab3a;
+scroll-behavior: smooth;
+}
+* {
+    box-sizing: border-box;
+}
+section {
+    height: 600px; /* Hauteur de la section */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em; 
+}
+  
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    height: 64px;
+    background-color: #fbfbfb; 
+    border-bottom: 1px solid #e9eBeA;
+    z-index: 100;
+
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: left;
+}
+
+  
+
+  
+nav a {
+    text-decoration: none;
+    margin-left: 10px;
+    margin-right: 20px;
+    transition: color 0.3s ease; /* Transition de couleur fluide */
+}
+
+nav a:link,
+nav a:visited {
+    color: #93441A; /* Couleur du texte pour les liens inactifs */
+}
+  
+nav a:hover {
+    color: #5c4612; /* Couleur du texte au survol */
+}
+  
+nav a.active {
+    position: relative;
+    color: #daab3a; /* Couleur du texte pour l'élément actif */
+}
+
+nav a.active::after {
+    content: "";
+    position: absolute;
+    bottom: -4px; /* Ajuste la position du soulignement par rapport au texte */
+    left: 0;
+    width: 100%;
+    height: 2px; /* Épaisseur du soulignement */
+    background-color: #daab3a; /* Couleur du soulignement */
+    animation: underline 0.3s ease forwards; /* Durée et effet de l'animation */
+}
+
+@keyframes underline {
+    from {
+        width: 0;
+        left: 50%;
+    }
+    to {
+        width: 100%;
+        left: 0;
+    }
+}
+section:nth-child(even) {
+    background-color: #eee6d8; /* Couleur de fond pour les sections paires */
+}
+
+section:nth-child(odd) {
+    background-color: #ece1cc; /* Couleur de fond pour les sections impaires */
+}
+
